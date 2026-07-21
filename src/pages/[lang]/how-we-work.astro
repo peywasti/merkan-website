@@ -1,0 +1,74 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { translations, isLang, defaultLang, type Lang } from "../../i18n/index";
+import {
+  FileText,
+  Search,
+  BarChart3,
+  Scale,
+  Truck,
+  Target,
+} from "lucide-astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: "en" } },
+    { params: { lang: "fa" } },
+    { params: { lang: "tr" } },
+  ];
+}
+
+const { lang } = Astro.params;
+let safeLang: Lang = defaultLang;
+if (isLang(lang)) safeLang = lang;
+const t = translations[safeLang];
+
+const stepIcons = [FileText, Search, BarChart3, Scale, Truck, Target];
+---
+
+<Layout lang={safeLang}>
+  <!-- Hero -->
+  <section class="bg-navy-900 text-white py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl md:text-5xl font-bold mb-6">{t.steps.title}</h1>
+      <p class="text-lg text-navy-200 max-w-3xl leading-relaxed">
+        {t.steps.desc}
+      </p>
+    </div>
+  </section>
+
+  <!-- Steps -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          t.steps.items.map((step, i) => {
+            const Icon = stepIcons[i] || FileText;
+            return (
+              <div class="relative p-8 rounded-2xl bg-stone-50 border border-stone-100 card-hover overflow-hidden">
+                {/* Step number background */}
+                <div class="absolute -top-4 -start-4 w-24 h-24 rounded-full bg-gold-100/50 flex items-center justify-center">
+                  <span class="text-4xl font-bold text-gold-300 mt-4 ms-4">
+                    {i + 1}
+                  </span>
+                </div>
+
+                <div class="relative pt-6">
+                  <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center mb-5">
+                    <Icon class="w-6 h-6" />
+                  </div>
+                  <h3 class="text-lg font-bold text-navy-900 mb-3">
+                    {step.title}
+                  </h3>
+                  <p class="text-slate-600 leading-relaxed text-sm">
+                    {step.desc}
+                  </p>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
