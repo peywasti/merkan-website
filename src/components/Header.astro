@@ -19,7 +19,7 @@ const navItems = [
 ];
 
 function switchLangUrl(targetLang: string, path: string) {
-  return path.replace(\/^\/[a-z]{2}\//, `\/${targetLang}/`);
+  return path.replace(/^\/[a-z]{2}\//, `/${targetLang}/`);
 }
 
 const orderedLangs: Lang[] = ["en", "tr", "fa"];
