@@ -146,22 +146,6 @@ const t = translations[safeLang];
             <div
               class="w-12 h-12 rounded-xl bg-gold-100 text-gold-700 flex items-center justify-center shrink-0"
             >
-              <Mail class="w-6 h-6" />
-            </div>
-            <div>
-              <h3 class="font-semibold text-slate-800 mb-1">
-                {t.contact.info.email}
-              </h3>
-              <p class="text-slate-600 text-sm" dir="ltr">info@merkan.ir</p>
-            </div>
-          </div>
-
-          <div
-            class="p-6 rounded-2xl bg-stone-50 border border-stone-100 flex items-start gap-4"
-          >
-            <div
-              class="w-12 h-12 rounded-xl bg-gold-100 text-gold-700 flex items-center justify-center shrink-0"
-            >
               <MapPin class="w-6 h-6" />
             </div>
             <div>
@@ -173,7 +157,12 @@ const t = translations[safeLang];
               </p>
               <div class="flex items-center gap-2 mt-2 text-slate-600 text-sm">
                 <Phone class="w-4 h-4" />
-                <span dir="ltr">+90 539 771 3059</span>
+                <a
+                  href="tel:+905397713059"
+                  dir="ltr"
+                  class="hover:text-navy-800 transition-colors"
+                  >+90 539 771 3059</a
+                >
               </div>
             </div>
           </div>
@@ -195,8 +184,33 @@ const t = translations[safeLang];
               </p>
               <div class="flex items-center gap-2 mt-2 text-slate-600 text-sm">
                 <Phone class="w-4 h-4" />
-                <span dir="ltr">+98 914 309 4064</span>
+                <a
+                  href="tel:+989143094064"
+                  dir="ltr"
+                  class="hover:text-navy-800 transition-colors"
+                  >+98 914 309 4064</a
+                >
               </div>
+            </div>
+          </div>
+
+          <div
+            class="p-6 rounded-2xl bg-stone-50 border border-stone-100 flex items-start gap-4"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-gold-100 text-gold-700 flex items-center justify-center shrink-0"
+            >
+              <Mail class="w-6 h-6" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-800 mb-1">
+                {t.contact.info.email}
+              </h3>
+              <a
+                href="mailto:info@merkan.ir"
+                class="text-slate-600 text-sm hover:text-navy-800 transition-colors"
+                dir="ltr">info@merkan.ir</a
+              >
             </div>
           </div>
         </div>
