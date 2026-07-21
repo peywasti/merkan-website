@@ -38,6 +38,7 @@
 
 body {
   font-family: var(--font-sans);
+  font-size: 18px;
   color: var(--color-slate-800);
   background-color: #fafafa;
   overflow-x: hidden;
