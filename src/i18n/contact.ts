@@ -17,6 +17,17 @@ export const contact = {
       phone: "Phone / WhatsApp",
       whatsapp: "Phone / WhatsApp",
     },
+    addresses: {
+      title: "Our Offices",
+      turkey: {
+        label: "Turkey Office",
+        address: "No: 53/18, Porsuk Caddesi, Yayla Mahallesi, Keçiören, Ankara, Türkiye",
+      },
+      iran: {
+        label: "Iran Office",
+        address: "Atiq Commercial Complex, Block A, 2nd Floor, Unit 1, Mansour Square, Tabriz, Iran",
+      },
+    },
   },
   fa: {
     title: "تماس با ما",
@@ -36,6 +47,17 @@ export const contact = {
       phone: "تلفن / واتساپ",
       whatsapp: "تلفن / واتساپ",
     },
+    addresses: {
+      title: "دفاتر ما",
+      turkey: {
+        label: "دفتر ترکیه",
+        address: "پلاک ۵۳/۱۸، خیابان پورسوک، محله یایلا، منطقه کچیورن، آنکارا، ترکیه",
+      },
+      iran: {
+        label: "دفتر ایران",
+        address: "ایران، تبریز، میدان منصور، مجتمع تجاری عتیق، بلوک A، طبقه ۲ واحد ۱",
+      },
+    },
   },
   tr: {
     title: "İletişim",
@@ -54,6 +76,17 @@ export const contact = {
       email: "E-posta",
       phone: "WhatsApp / Telefon",
       whatsapp: "WhatsApp / Telefon",
+    },
+    addresses: {
+      title: "Ofislerimiz",
+      turkey: {
+        label: "Türkiye Ofisi",
+        address: "Porsuk Caddesi No: 53/18, Yayla Mahallesi, Keçiören, Ankara, Türkiye",
+      },
+      iran: {
+        label: "İran Ofisi",
+        address: "Atiq Ticaret Merkezi, A Blok, 2. Kat, Daire 1, Mansur Meydanı, Tebriz, İran",
+      },
     },
   },
 };
