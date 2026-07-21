@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-50: #f0f4f8;
+  --color-navy-100: #d9e2ec;
+  --color-navy-200: #bcccdc;
+  --color-navy-300: #9fb3c8;
+  --color-navy-400: #829ab1;
+  --color-navy-500: #627d98;
+  --color-navy-600: #486581;
+  --color-navy-700: #334e68;
+  --color-navy-800: #243b53;
+  --color-navy-900: #102a43;
+  --color-navy-950: #061523;
+
+  --color-gold-50: #fdf8e8;
+  --color-gold-100: #f8ebc0;
+  --color-gold-200: #f0d68a;
+  --color-gold-300: #e6c255;
+  --color-gold-400: #dbb030;
+  --color-gold-500: #c79a1a;
+  --color-gold-600: #a07a14;
+  --color-gold-700: #785b0f;
+  --color-gold-800: #503d0a;
+  --color-gold-900: #2b2006;
+
+  --font-sans: 'Inter', 'Segoe UI', 'Tahoma', system-ui, sans-serif;
+  --font-fa: 'Arad', 'Vazirmatn', 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+@font-face {
+  font-family: 'Arad';
+  src: url('../assets/fonts/AradVF.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-slate-800);
+  background-color: #fafafa;
+  overflow-x: hidden;
+}
+
+[dir="rtl"] body {
+  font-family: var(--font-fa);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, var(--color-navy-950) 0%, var(--color-navy-800) 50%, var(--color-navy-900) 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, var(--color-gold-500) 0%, var(--color-gold-300) 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-gold-300) 0%, var(--color-gold-500) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(15, 42, 67, 0.12);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.step-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-gold-500), var(--color-gold-300));
+  transform: translateX(-50%);
+}
+
+[dir="rtl"] .step-line {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
