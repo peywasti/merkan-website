@@ -9,7 +9,7 @@ export function getStaticPaths() {
   ];
 }
 import { translations, isLang, defaultLang, type Lang } from "../../i18n/index";
-import { Mail, Phone, MessageCircle, Send, MapPin } from "lucide-astro";
+import { Mail, Phone, Send, MapPin } from "lucide-astro";
 
 const { lang } = Astro.params;
 let safeLang: Lang = defaultLang;
@@ -162,42 +162,6 @@ const t = translations[safeLang];
             <div
               class="w-12 h-12 rounded-xl bg-gold-100 text-gold-700 flex items-center justify-center shrink-0"
             >
-              <Phone class="w-6 h-6" />
-            </div>
-            <div>
-              <h3 class="font-semibold text-slate-800 mb-1">
-                {t.contact.info.phone}
-              </h3>
-              <p class="text-slate-600 text-sm" dir="ltr">+98 914 309 4064</p>
-            </div>
-          </div>
-
-          <div
-            class="p-6 rounded-2xl bg-stone-50 border border-stone-100 flex items-start gap-4"
-          >
-            <div
-              class="w-12 h-12 rounded-xl bg-gold-100 text-gold-700 flex items-center justify-center shrink-0"
-            >
-              <MessageCircle class="w-6 h-6" />
-            </div>
-            <div>
-              <h3 class="font-semibold text-slate-800 mb-1">
-                {t.contact.info.whatsapp}
-              </h3>
-              <p class="text-slate-600 text-sm" dir="ltr">+90 539 771 3059</p>
-            </div>
-          </div>
-
-          <h2 class="text-xl font-bold text-navy-900 mt-6">
-            {t.contact.addresses.title}
-          </h2>
-
-          <div
-            class="p-6 rounded-2xl bg-stone-50 border border-stone-100 flex items-start gap-4"
-          >
-            <div
-              class="w-12 h-12 rounded-xl bg-gold-100 text-gold-700 flex items-center justify-center shrink-0"
-            >
               <MapPin class="w-6 h-6" />
             </div>
             <div>
@@ -207,6 +171,10 @@ const t = translations[safeLang];
               <p class="text-slate-600 text-sm">
                 {t.contact.addresses.turkey.address}
               </p>
+              <div class="flex items-center gap-2 mt-2 text-slate-600 text-sm">
+                <Phone class="w-4 h-4" />
+                <span dir="ltr">+90 539 771 3059</span>
+              </div>
             </div>
           </div>
 
@@ -225,6 +193,10 @@ const t = translations[safeLang];
               <p class="text-slate-600 text-sm">
                 {t.contact.addresses.iran.address}
               </p>
+              <div class="flex items-center gap-2 mt-2 text-slate-600 text-sm">
+                <Phone class="w-4 h-4" />
+                <span dir="ltr">+98 914 309 4064</span>
+              </div>
             </div>
           </div>
         </div>
