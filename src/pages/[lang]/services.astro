@@ -32,10 +32,10 @@ const serviceIcons = [TrendingUp, DollarSign, Shield, Truck, Award];
 
 <Layout lang={safeLang}>
   <!-- Hero -->
-  <section class="bg-navy-900 text-white py-20 lg:py-28">
+  <section class="bg-primary-900 text-white py-20 lg:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="text-3xl md:text-5xl font-bold mb-6">{t.services.title}</h1>
-      <p class="text-lg text-navy-200 max-w-3xl leading-relaxed">
+      <p class="text-lg text-primary-200 max-w-3xl leading-relaxed">
         {t.services.desc}
       </p>
     </div>
@@ -50,7 +50,7 @@ const serviceIcons = [TrendingUp, DollarSign, Shield, Truck, Award];
             const Icon = serviceIcons[i] || CheckCircle;
             return (
               <div class="p-8 rounded-2xl bg-white border border-stone-100 shadow-sm card-hover">
-                <div class="w-14 h-14 rounded-xl bg-gold-100 text-gold-700 flex items-center justify-center mb-5">
+                <div class="w-14 h-14 rounded-xl bg-accent-100 text-accent-700 flex items-center justify-center mb-5">
                   <Icon class="w-7 h-7" />
                 </div>
                 <h3 class="text-lg font-bold text-slate-800 mb-3">
@@ -75,7 +75,7 @@ const serviceIcons = [TrendingUp, DollarSign, Shield, Truck, Award];
   <!-- Why Merkan -->
   <section class="py-20 bg-stone-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-navy-900 text-center mb-6">
+      <h2 class="text-3xl font-bold text-primary-900 text-center mb-6">
         {t.why.title}
       </h2>
       <p class="text-lg text-slate-600 text-center max-w-3xl mx-auto mb-16">
@@ -85,9 +85,9 @@ const serviceIcons = [TrendingUp, DollarSign, Shield, Truck, Award];
       <!-- Expertise -->
       <div class="mb-16">
         <h3
-          class="text-xl font-bold text-navy-800 mb-6 flex items-center gap-2"
+          class="text-xl font-bold text-primary-800 mb-6 flex items-center gap-2"
         >
-          <BarChart3 class="w-6 h-6 text-gold-600" />
+          <BarChart3 class="w-6 h-6 text-accent-600" />
           {t.why.expertiseTitle}
         </h3>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -107,16 +107,16 @@ const serviceIcons = [TrendingUp, DollarSign, Shield, Truck, Award];
       <!-- Vision -->
       <div class="mb-16">
         <h3
-          class="text-xl font-bold text-navy-800 mb-6 flex items-center gap-2"
+          class="text-xl font-bold text-primary-800 mb-6 flex items-center gap-2"
         >
-          <Eye class="w-6 h-6 text-gold-600" />
+          <Eye class="w-6 h-6 text-accent-600" />
           {t.why.visionTitle}
         </h3>
         <div class="space-y-3 max-w-3xl">
           {
             t.why.visionItems.map((item) => (
               <div class="flex items-start gap-3 p-4 rounded-xl bg-white border border-stone-100">
-                <CheckCircle class="w-5 h-5 text-gold-500 shrink-0 mt-0.5" />
+                <CheckCircle class="w-5 h-5 text-accent-500 shrink-0 mt-0.5" />
                 <p class="text-slate-700">{item}</p>
               </div>
             ))
@@ -127,16 +127,16 @@ const serviceIcons = [TrendingUp, DollarSign, Shield, Truck, Award];
       <!-- Commitment -->
       <div class="mb-16">
         <h3
-          class="text-xl font-bold text-navy-800 mb-6 flex items-center gap-2"
+          class="text-xl font-bold text-primary-800 mb-6 flex items-center gap-2"
         >
-          <Users class="w-6 h-6 text-gold-600" />
+          <Users class="w-6 h-6 text-accent-600" />
           {t.why.commitmentTitle}
         </h3>
         <div class="grid md:grid-cols-2 gap-4 max-w-3xl">
           {
             t.why.commitmentItems.map((item) => (
               <div class="flex items-start gap-3 p-4 rounded-xl bg-white border border-stone-100">
-                <CheckCircle class="w-5 h-5 text-gold-500 shrink-0 mt-0.5" />
+                <CheckCircle class="w-5 h-5 text-accent-500 shrink-0 mt-0.5" />
                 <p class="text-slate-700 text-sm">{item}</p>
               </div>
             ))
@@ -147,9 +147,9 @@ const serviceIcons = [TrendingUp, DollarSign, Shield, Truck, Award];
       <!-- Advantage -->
       <div class="mb-10">
         <h3
-          class="text-xl font-bold text-navy-800 mb-6 flex items-center gap-2"
+          class="text-xl font-bold text-primary-800 mb-6 flex items-center gap-2"
         >
-          <Star class="w-6 h-6 text-gold-600" />
+          <Star class="w-6 h-6 text-accent-600" />
           {t.why.advantageTitle}
         </h3>
         <div class="grid md:grid-cols-3 gap-4">

@@ -1,28 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy-50: #f0f4f8;
-  --color-navy-100: #d9e2ec;
-  --color-navy-200: #bcccdc;
-  --color-navy-300: #9fb3c8;
-  --color-navy-400: #829ab1;
-  --color-navy-500: #627d98;
-  --color-navy-600: #486581;
-  --color-navy-700: #334e68;
-  --color-navy-800: #243b53;
-  --color-navy-900: #102a43;
-  --color-navy-950: #061523;
+  --color-primary-50: #f0f4f8;
+  --color-primary-100: #d9e2ec;
+  --color-primary-200: #bcccdc;
+  --color-primary-300: #9fb3c8;
+  --color-primary-400: #829ab1;
+  --color-primary-500: #627d98;
+  --color-primary-600: #486581;
+  --color-primary-700: #334e68;
+  --color-primary-800: #1e3a5a;
+  --color-primary-900: #0f2642;
+  --color-primary-950: #061220;
 
-  --color-gold-50: #fdf8e8;
-  --color-gold-100: #f8ebc0;
-  --color-gold-200: #f0d68a;
-  --color-gold-300: #e6c255;
-  --color-gold-400: #dbb030;
-  --color-gold-500: #c79a1a;
-  --color-gold-600: #a07a14;
-  --color-gold-700: #785b0f;
-  --color-gold-800: #503d0a;
-  --color-gold-900: #2b2006;
+  --color-accent-50: #fff7f4;
+  --color-accent-100: #fde8db;
+  --color-accent-200: #faceb3;
+  --color-accent-300: #f5a07a;
+  --color-accent-400: #eb7d4d;
+  --color-accent-500: #e05d2e;
+  --color-accent-600: #cc4a2a;
+  --color-accent-700: #a93a26;
+  --color-accent-800: #8a3126;
+  --color-accent-900: #5c1f1c;
 
   --font-sans: 'Inter', 'Segoe UI', 'Tahoma', system-ui, sans-serif;
   --font-fa: 'Arad', 'Vazirmatn', 'Inter', 'Segoe UI', system-ui, sans-serif;
@@ -59,15 +59,15 @@ html {
 }
 
 .gradient-hero {
-  background: linear-gradient(135deg, var(--color-navy-950) 0%, var(--color-navy-800) 50%, var(--color-navy-900) 100%);
+  background: linear-gradient(135deg, var(--color-primary-950) 0%, var(--color-primary-800) 50%, var(--color-primary-900) 100%);
 }
 
 .gradient-accent {
-  background: linear-gradient(135deg, var(--color-gold-500) 0%, var(--color-gold-300) 100%);
+  background: linear-gradient(135deg, var(--color-accent-500) 0%, var(--color-accent-300) 100%);
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--color-gold-300) 0%, var(--color-gold-500) 100%);
+  background: linear-gradient(135deg, var(--color-accent-300) 0%, var(--color-accent-500) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -79,7 +79,7 @@ html {
 
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(15, 42, 67, 0.12);
+  box-shadow: 0 20px 40px rgba(15, 38, 66, 0.12);
 }
 
 .animate-fade-in {
@@ -103,7 +103,7 @@ html {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, var(--color-gold-500), var(--color-gold-300));
+  background: linear-gradient(to bottom, var(--color-accent-500), var(--color-accent-300));
   transform: translateX(-50%);
 }
 

@@ -20,13 +20,10 @@ const t = translations[safeLang];
 <Layout lang={safeLang}>
   <!-- Hero -->
   <section
-    class="gradient-hero text-white py-24 lg:py-32 relative overflow-hidden"
+    class="text-white py-24 lg:py-32 relative overflow-hidden bg-cover bg-center bg-no-repeat"
+    style="background-image: url('/hero-abstract.svg');"
   >
-    <div
-      class="absolute inset-0 opacity-10"
-      style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;"
-    >
-    </div>
+    <div class="absolute inset-0 bg-primary-950/30"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="max-w-3xl animate-fade-in">
         <h1
@@ -34,15 +31,15 @@ const t = translations[safeLang];
         >
           {t.home.title}
         </h1>
-        <p class="text-xl md:text-2xl text-gold-300 mb-8 font-light">
+        <p class="text-xl md:text-2xl text-accent-300 mb-8 font-light">
           {t.home.subtitle}
         </p>
-        <p class="text-lg text-navy-200 mb-10 max-w-2xl leading-relaxed">
+        <p class="text-lg text-primary-200 mb-10 max-w-2xl leading-relaxed">
           {t.home.desc}
         </p>
         <a
           href={`/${safeLang}/contact`}
-          class="inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 shadow-lg shadow-gold-500/25"
+          class="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-400 text-primary-900 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 shadow-lg shadow-accent-500/25"
         >
           {t.home.cta}
           <ArrowRight class="w-5 h-5" />
@@ -58,7 +55,7 @@ const t = translations[safeLang];
         {
           t.home.points.map((point, i) => (
             <div class="p-6 rounded-2xl bg-stone-50 border border-stone-100 card-hover">
-              <div class="w-10 h-10 rounded-lg bg-navy-900 text-gold-400 flex items-center justify-center mb-4 text-lg font-bold">
+              <div class="w-10 h-10 rounded-lg bg-primary-900 text-accent-400 flex items-center justify-center mb-4 text-lg font-bold">
                 {i + 1}
               </div>
               <p class="text-slate-700 font-medium leading-relaxed">{point}</p>
@@ -70,7 +67,7 @@ const t = translations[safeLang];
   </section>
 
   <!-- CTA Banner -->
-  <section class="py-16 bg-navy-900">
+  <section class="py-16 bg-primary-900">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl font-bold text-white mb-4">
         {
@@ -81,7 +78,7 @@ const t = translations[safeLang];
               : "Ready to Enter the Iranian Market?"
         }
       </h2>
-      <p class="text-navy-200 mb-8">
+      <p class="text-primary-200 mb-8">
         {
           safeLang === "fa"
             ? "با تیمی با بیش از ۲۵ سال تجربه و شناخت عمیق از بازار همراه شوید."
@@ -92,7 +89,7 @@ const t = translations[safeLang];
       </p>
       <a
         href={`/${safeLang}/contact`}
-        class="inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105"
+        class="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-400 text-primary-900 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105"
       >
         {
           safeLang === "fa"
