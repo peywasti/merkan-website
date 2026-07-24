@@ -1,143 +1,52 @@
-# Merkan Website
+# Merkan
 
-Multilingual static marketing site for **Merkan** — a business consulting company that helps foreign businesses enter the Iranian market.
+**Your Gateway to the Iranian Market**
 
-- **Production:** [https://merkan.ir](https://merkan.ir)
-- **Repository:** `github.com:peywasti/merkan-website`
+Merkan is a business consulting firm that helps foreign companies enter, establish, and grow in Iran. From market research and legal compliance to supply chain setup and local partnerships, we handle the complexity so you can focus on your business.
 
----
-
-## Tech Stack
-
-| Layer | Technology |
-|-------|------------|
-| Framework | [Astro](https://astro.build) v7 (static-site generation) |
-| Styling | [Tailwind CSS](https://tailwindcss.com) v4 — uses `@theme` block in `global.css`, no `tailwind.config.js` |
-| Icons | [`lucide-astro`](https://lucide.dev) |
-| i18n | Custom TypeScript modules (zero runtime cost) |
-| Package manager | `pnpm` |
+- **Live site:** [https://merkan.ir](https://merkan.ir)
 
 ---
 
-## Project Structure
+## About This Website
 
-```
-├── public/
-│   └── hero-abstract.svg          # Homepage hero background
-├── src/
-│   ├── assets/
-│   │   ├── merkan-logo.svg        # Brand logo (source of accent colors)
-│   │   ├── favicon.svg
-│   │   └── fonts/
-│   │       └── AradVF.woff2       # Persian variable font
-│   ├── components/
-│   │   ├── Header.astro           # Sticky header with nav & language switcher
-│   │   └── Footer.astro
-│   ├── i18n/                      # Translation modules (per page/topic)
-│   │   ├── index.ts               # Aggregates all translations + helpers
-│   │   ├── common.ts              # Shared strings (nav, footer, meta)
-│   │   ├── home.ts
-│   │   ├── about.ts
-│   │   ├── services.ts
-│   │   ├── why.ts
-│   │   ├── steps.ts               # "How we work"
-│   │   └── contact.ts
-│   ├── layouts/
-│   │   └── Layout.astro           # Root HTML layout (SEO meta, fonts, RTL)
-│   ├── pages/                     # Static routing — no dynamic params
-│   │   ├── about.astro            # Persian (default, no prefix)
-│   │   ├── contact.astro
-│   │   ├── how-we-work.astro
-│   │   ├── index.astro            # / → Persian homepage
-│   │   ├── services.astro
-│   │   ├── en/                    # English (/en/*)
-│   │   │   ├── index.astro
-│   │   │   ├── about.astro
-│   │   │   ├── services.astro
-│   │   │   ├── how-we-work.astro
-│   │   │   └── contact.astro
-│   │   ├── tr/                    # Turkish (/tr/*)
-│   │   │   ├── index.astro
-│   │   │   ├── about.astro
-│   │   │   ├── services.astro
-│   │   │   ├── how-we-work.astro
-│   │   │   └── contact.astro
-│   │   ├── robots.txt.ts
-│   │   └── sitemap.xml.ts
-│   └── styles/
-│       └── global.css             # Tailwind import, theme tokens, utilities
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+This site serves as the digital front door for Merkan. It is designed to:
+
+1. **Introduce Merkan** — who we are, what we do, and why we are the right partner for entering Iran.
+2. **Explain our services** — detailed breakdowns of market research, legal support, logistics, and strategic consulting.
+3. **Show our process** — a clear step-by-step guide on how we work with clients from first contact to full operation.
+4. **Build trust** — case studies, credentials, and transparent information that help potential clients feel confident.
+5. **Make contact easy** — a simple contact form and direct communication channels for inquiries in multiple languages.
 
 ---
 
-## Internationalization
+## Languages
 
-| Code | Language | Direction | URL pattern |
-|------|----------|-----------|-------------|
-| `fa` | Persian (Farsi) | `rtl` | `/*` (no prefix) |
-| `en` | English | `ltr` | `/en/*` |
-| `tr` | Turkish | `ltr` | `/tr/*` |
+The website is available in three languages to serve our diverse client base:
 
-Translations live in `src/i18n/*.ts` as plain objects. Astro inlines them at build time — there is **zero client-side i18n overhead**.
-
-Key helpers in `src/i18n/index.ts`:
-- `getLocalePath(path, lang)` — prepend `\en` or `\tr` when needed
-- `switchLangUrl(targetLang, currentPath)` — compute the equivalent page in another language
+| Language | URL |
+|----------|-----|
+| 🇮🇷 Persian (Farsi) | [merkan.ir](https://merkan.ir) |
+| 🇬🇧 English | [merkan.ir/en](https://merkan.ir/en) |
+| 🇹🇷 Turkish | [merkan.ir/tr](https://merkan.ir/tr) |
 
 ---
 
-## Color Palette
+## What We Offer
 
-Colors are derived from the brand logo (`src/assets/merkan-logo.svg`).
-
-- **Primary (deep navy)** — `primary-50` … `primary-950` — dark backgrounds, headings, UI
-- **Accent (warm orange-red)** — `accent-50` … `accent-900` — CTAs, buttons, highlights
-
-Defined in `src/styles/global.css` inside the `@theme` block.
-
-> Do **not** create a `tailwind.config.js` — Tailwind v4 is configured via CSS.
+- **Market Entry Strategy** — Feasibility studies, competitor analysis, and market sizing.
+- **Legal & Compliance** — Navigating Iranian regulations, licensing, and contracts.
+- **Supply Chain & Logistics** — Setting up reliable import, distribution, and warehousing.
+- **Local Partnerships** — Connecting you with trusted distributors, suppliers, and stakeholders.
 
 ---
 
-## Development
+## Get in Touch
 
-```bash
-# Install dependencies
-pnpm install
+Whether you are exploring opportunities or ready to enter the market, we are here to help.
 
-# Start dev server
-pnpm dev          # → localhost:4321
-
-# Build for production
-pnpm build        # → ./dist/
-
-# Preview production build
-pnpm preview
-```
-
-> This project uses `pnpm`. A `pnpm-lock.yaml` is present.
+📍 Visit [merkan.ir/contact](https://merkan.ir/contact) or reach out through the site.
 
 ---
 
-## Branches
-
-| Branch | Purpose |
-|--------|---------|
-| `main` | Production-ready code |
-| `new-theme` | Color rebrand & abstract hero background |
-| `fa-default` | Persian as default locale without URL prefix |
-
----
-
-## Known Issues
-
-`pnpm build` currently fails with an Astro internal error related to the `cookie` package CJS/ESM mismatch. This is a dependency issue between Astro v7 and `cookie`, **not** caused by application code. It likely requires an Astro or dependency upgrade.
-
----
-
-## License
-
-Proprietary — © Merkan
+*© Merkan — All rights reserved.*
