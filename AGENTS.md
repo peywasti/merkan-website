@@ -92,7 +92,7 @@
 3. `src/i18n/index.ts` exports:
    - `translations` — full nested object
    - `Lang` type — `"en" | "fa" | "tr"`
-   - `defaultLang` — `"en"`
+   - `defaultLang` — `"fa"`
    - `langs` — array of supported codes
    - `isLang(value)` — type guard
 4. Every page receives the current `lang` from `Astro.params`, validates it with `isLang()`, then reads `const t = translations[safeLang]`.

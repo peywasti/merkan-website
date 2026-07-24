@@ -1,0 +1,164 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import { translations, type Lang } from "../../i18n/index";
+import {
+  TrendingUp,
+  DollarSign,
+  Shield,
+  Truck,
+  Award,
+  CheckCircle,
+  BarChart3,
+  Eye,
+  Users,
+  Star,
+} from "lucide-astro";
+
+const lang: Lang = "en";
+const safeLang: Lang = "en";
+// English locale
+const t = translations[safeLang];
+
+const serviceIcons = [TrendingUp, DollarSign, Shield, Truck, Award];
+---
+
+<Layout lang={safeLang}>
+  <!-- Hero -->
+  <section class="bg-primary-900 text-white py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl md:text-5xl font-bold mb-6">{t.services.title}</h1>
+      <p class="text-lg text-primary-200 max-w-3xl leading-relaxed">
+        {t.services.desc}
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          t.services.items.map((service, i) => {
+            const Icon = serviceIcons[i] || CheckCircle;
+            return (
+              <div class="p-8 rounded-2xl bg-white border border-stone-100 shadow-sm card-hover">
+                <div class="w-14 h-14 rounded-xl bg-accent-100 text-accent-700 flex items-center justify-center mb-5">
+                  <Icon class="w-7 h-7" />
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mb-3">
+                  {service.title}
+                </h3>
+                <p class="text-slate-600 leading-relaxed text-sm">
+                  {service.desc}
+                </p>
+              </div>
+            );
+          })
+        }
+      </div>
+      <div class="mt-14 text-center">
+        <p class="text-lg text-slate-700 max-w-2xl mx-auto">
+          {t.services.cta}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Merkan -->
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-primary-900 text-center mb-6">
+        {t.why.title}
+      </h2>
+      <p class="text-lg text-slate-600 text-center max-w-3xl mx-auto mb-16">
+        {t.why.intro}
+      </p>
+
+      <!-- Expertise -->
+      <div class="mb-16">
+        <h3
+          class="text-xl font-bold text-primary-800 mb-6 flex items-center gap-2"
+        >
+          <BarChart3 class="w-6 h-6 text-accent-600" />
+          {t.why.expertiseTitle}
+        </h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {
+            t.why.expertiseItems.map((item) => (
+              <div class="p-5 rounded-xl bg-white border border-stone-100">
+                <h4 class="font-semibold text-slate-800 mb-2">{item.title}</h4>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Vision -->
+      <div class="mb-16">
+        <h3
+          class="text-xl font-bold text-primary-800 mb-6 flex items-center gap-2"
+        >
+          <Eye class="w-6 h-6 text-accent-600" />
+          {t.why.visionTitle}
+        </h3>
+        <div class="space-y-3 max-w-3xl">
+          {
+            t.why.visionItems.map((item) => (
+              <div class="flex items-start gap-3 p-4 rounded-xl bg-white border border-stone-100">
+                <CheckCircle class="w-5 h-5 text-accent-500 shrink-0 mt-0.5" />
+                <p class="text-slate-700">{item}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Commitment -->
+      <div class="mb-16">
+        <h3
+          class="text-xl font-bold text-primary-800 mb-6 flex items-center gap-2"
+        >
+          <Users class="w-6 h-6 text-accent-600" />
+          {t.why.commitmentTitle}
+        </h3>
+        <div class="grid md:grid-cols-2 gap-4 max-w-3xl">
+          {
+            t.why.commitmentItems.map((item) => (
+              <div class="flex items-start gap-3 p-4 rounded-xl bg-white border border-stone-100">
+                <CheckCircle class="w-5 h-5 text-accent-500 shrink-0 mt-0.5" />
+                <p class="text-slate-700 text-sm">{item}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Advantage -->
+      <div class="mb-10">
+        <h3
+          class="text-xl font-bold text-primary-800 mb-6 flex items-center gap-2"
+        >
+          <Star class="w-6 h-6 text-accent-600" />
+          {t.why.advantageTitle}
+        </h3>
+        <div class="grid md:grid-cols-3 gap-4">
+          {
+            t.why.advantageItems.map((item) => (
+              <div class="p-5 rounded-xl bg-white border border-stone-100 text-center">
+                <p class="text-slate-700 text-sm leading-relaxed">{item}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="text-center pt-8 border-t border-stone-200">
+        <p class="text-lg text-slate-700">{t.why.closing}</p>
+      </div>
+    </div>
+  </section>
+</Layout>

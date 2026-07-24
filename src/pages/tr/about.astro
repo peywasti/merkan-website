@@ -1,14 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 
-export function getStaticPaths() {
-  return [
-    { params: { lang: "en" } },
-    { params: { lang: "fa" } },
-    { params: { lang: "tr" } },
-  ];
-}
-import { translations, isLang, defaultLang, type Lang } from "../../i18n/index";
+import { translations, type Lang } from "../../i18n/index";
 import {
   Target,
   Briefcase,
@@ -18,9 +11,9 @@ import {
   CheckCircle,
 } from "lucide-astro";
 
-const { lang } = Astro.params;
-let safeLang: Lang = defaultLang;
-if (isLang(lang)) safeLang = lang;
+const lang: Lang = "tr";
+const safeLang: Lang = "tr";
+// Turkish locale
 const t = translations[safeLang];
 
 const offerIcons = [Briefcase, Scale, Truck, Award];

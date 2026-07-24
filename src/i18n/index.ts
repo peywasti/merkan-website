@@ -13,9 +13,19 @@ export const translations = {
 };
 
 export type Lang = "en" | "fa" | "tr";
-export const defaultLang: Lang = "en";
+export const defaultLang: Lang = "fa";
 export const langs: Lang[] = ["en", "fa", "tr"];
 
-export function isLang(value: string): value is Lang {
+export function isLang(value: string | undefined): value is Lang {
+  if (!value) return false;
   return langs.includes(value as Lang);
+}
+
+export function getLocalePath(path: string, lang: Lang): string {
+  return lang === defaultLang ? path : `/${lang}${path}`;
+}
+
+export function switchLangUrl(targetLang: Lang, currentPath: string): string {
+  const cleanPath = currentPath.replace(/^\/(en|tr|fa)(?=\/|$)/, '') || '/';
+  return targetLang === defaultLang ? cleanPath : `/${targetLang}${cleanPath}`;
 }

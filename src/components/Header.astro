@@ -1,5 +1,10 @@
 ---
-import { translations, langs, type Lang } from "../i18n/index";
+import {
+  translations,
+  getLocalePath,
+  switchLangUrl,
+  type Lang,
+} from "../i18n/index";
 import { Menu } from "lucide-astro";
 import logo from "../assets/merkan-logo.svg";
 
@@ -12,15 +17,11 @@ interface Props {
 const { lang, currentPath, t } = Astro.props;
 
 const navItems = [
-  { href: `/${lang}/about`, label: t.nav.about },
-  { href: `/${lang}/services`, label: t.nav.services },
-  { href: `/${lang}/how-we-work`, label: t.nav.howWeWork },
-  { href: `/${lang}/contact`, label: t.nav.contact },
+  { href: getLocalePath("/about", lang), label: t.nav.about },
+  { href: getLocalePath("/services", lang), label: t.nav.services },
+  { href: getLocalePath("/how-we-work", lang), label: t.nav.howWeWork },
+  { href: getLocalePath("/contact", lang), label: t.nav.contact },
 ];
-
-function switchLangUrl(targetLang: string, path: string) {
-  return path.replace(/^\/[a-z]{2}\//, `/${targetLang}/`);
-}
 
 const orderedLangs: Lang[] = ["en", "tr", "fa"];
 ---
@@ -28,7 +29,10 @@ const orderedLangs: Lang[] = ["en", "tr", "fa"];
 <header class="sticky top-0 z-50 glass border-b border-white/20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 lg:h-20">
-      <a href={`/${lang}/`} class="flex items-center gap-3 shrink-0">
+      <a
+        href={getLocalePath("/", lang)}
+        class="flex items-center gap-3 shrink-0"
+      >
         <img
           src={logo.src}
           alt="Merkan"

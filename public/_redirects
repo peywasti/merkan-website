@@ -1,0 +1,3 @@
+# Redirect old /fa/* URLs to root (Persian is now the default locale, no prefix)
+/fa / 301
+/fa/* /:splat 301
