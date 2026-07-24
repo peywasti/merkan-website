@@ -1,46 +1,52 @@
-# Astro Starter Kit: Basics
+# Merkan
 
-```sh
-npm create astro@latest -- --template basics
-```
+**Your Gateway to the Iranian Market**
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Merkan is a business consulting firm that helps foreign companies enter, establish, and grow in Iran. From market research and legal compliance to supply chain setup and local partnerships, we handle the complexity so you can focus on your business.
 
-## 🚀 Project Structure
+- **Live site:** [https://merkan.ir](https://merkan.ir)
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## About This Website
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+This site serves as the digital front door for Merkan. It is designed to:
 
-## 🧞 Commands
+1. **Introduce Merkan** — who we are, what we do, and why we are the right partner for entering Iran.
+2. **Explain our services** — detailed breakdowns of market research, legal support, logistics, and strategic consulting.
+3. **Show our process** — a clear step-by-step guide on how we work with clients from first contact to full operation.
+4. **Build trust** — case studies, credentials, and transparent information that help potential clients feel confident.
+5. **Make contact easy** — a simple contact form and direct communication channels for inquiries in multiple languages.
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Languages
 
-## 👀 Want to learn more?
+The website is available in three languages to serve our diverse client base:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Language | URL |
+|----------|-----|
+| 🇮🇷 Persian (Farsi) | [merkan.ir](https://merkan.ir) |
+| 🇬🇧 English | [merkan.ir/en](https://merkan.ir/en) |
+| 🇹🇷 Turkish | [merkan.ir/tr](https://merkan.ir/tr) |
+
+---
+
+## What We Offer
+
+- **Market Entry Strategy** — Feasibility studies, competitor analysis, and market sizing.
+- **Legal & Compliance** — Navigating Iranian regulations, licensing, and contracts.
+- **Supply Chain & Logistics** — Setting up reliable import, distribution, and warehousing.
+- **Local Partnerships** — Connecting you with trusted distributors, suppliers, and stakeholders.
+
+---
+
+## Get in Touch
+
+Whether you are exploring opportunities or ready to enter the market, we are here to help.
+
+📍 Visit [merkan.ir/contact](https://merkan.ir/contact) or reach out through the site.
+
+---
+
+*© Merkan — All rights reserved.*
