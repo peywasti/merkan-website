@@ -1,0 +1,25 @@
+# Merkan
+
+> Merkan is a business-consulting company that helps foreign (especially Turkish) businesses enter the Iranian market. Since 1999, we have provided 25+ years of experience in import, trade, and market analysis, with offices in Ankara (Turkey) and Tabriz (Iran).
+
+## About
+
+Merkan links business needs with solutions, guiding manufacturers and companies through the Iranian market. We specialize in import/export, market entry, trade consulting, and market analysis across Iran, Turkey, and beyond. The website is available in Persian (default), English, and Turkish.
+
+## Key pages
+
+- [Home](https://merkan.ir/): Company overview and value proposition
+- [About Us](https://merkan.ir/about): Mission, services, and our expertise
+- [Services](https://merkan.ir/services): Import, trade, and market analysis services
+- [How We Work](https://merkan.ir/how-we-work): Our collaboration process
+- [Contact](https://merkan.ir/contact): Office addresses, phone, and WhatsApp contact details
+
+## Localized versions
+
+- [English](https://merkan.ir/en/): The full site in English
+- [Turkish](https://merkan.ir/tr/): The full site in Turkish
+
+## Contact
+
+- **Turkey Office:** No: 53/18, Porsuk Caddesi, Yayla Mahallesi, Keçiören, Ankara, Türkiye — +90 539 771 3059
+- **Iran Office:** Atiq Commercial Complex, Block A, 2nd Floor, Unit 1, Mansour Square, Tabriz, Iran — +98 914 309 4064
