@@ -22,7 +22,7 @@
 | Styling | [Tailwind CSS](https://tailwindcss.com) v4 | Uses `@theme` block in `global.css` — no `tailwind.config.js` |
 | Icons | [`lucide-astro`](https://lucide.dev) | Astro wrapper for Lucide icons |
 | i18n | Custom TypeScript modules | No external i18n library; see §4 |
-| Package manager | pnpm | `pnpm-lock.yaml` present |
+| Package manager | npm | `package-lock.json` present |
 
 ### Tailwind CSS v4 specifics
 - Theme colors are defined as CSS custom properties inside `@theme` in `src/styles/global.css`.
