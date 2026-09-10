@@ -1,0 +1,84 @@
+---
+import { translations, type Lang } from "../i18n/index";
+import logo from "../assets/merkan-logo.svg";
+
+interface Props {
+  lang?: Lang;
+}
+
+const { lang = "fa" } = Astro.props;
+
+const site = Astro.site?.origin ?? "https://merkan.ir";
+const logoUrl = new URL(logo.src, site).href;
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": `${site}/#organization`,
+    name: "Merkan",
+    alternateName: ["مرکان", "Merkan Consulting"],
+    url: `${site}/`,
+    logo: logoUrl,
+    image: logoUrl,
+    description: translations.en.meta.description,
+    foundingDate: "1999",
+    areaServed: ["Iran", "Türkiye", "Turkey"],
+    address: [
+      {
+        "@type": "PostalAddress",
+        name: "Turkey Office",
+        streetAddress:
+          "No: 53/18, Porsuk Caddesi, Yayla Mahallesi, Keçiören",
+        addressLocality: "Ankara",
+        addressRegion: "Keçiören",
+        addressCountry: "TR",
+      },
+      {
+        "@type": "PostalAddress",
+        name: "Iran Office",
+        streetAddress:
+          "Atiq Commercial Complex, Block A, 2nd Floor, Unit 1, Mansour Square",
+        addressLocality: "Tabriz",
+        addressCountry: "IR",
+      },
+    ],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+90 539 771 3059",
+        contactType: "customer service",
+        areaServed: "TR",
+        availableLanguage: ["en", "tr", "fa"],
+      },
+      {
+        "@type": "ContactPoint",
+        telephone: "+98 914 309 4064",
+        contactType: "customer service",
+        areaServed: "IR",
+        availableLanguage: ["fa", "en"],
+      },
+    ],
+    knowsAbout: [
+      "import",
+      "export",
+      "market entry",
+      "Iran market",
+      "trade consulting",
+      "market analysis",
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${site}/#website`,
+    url: `${site}/`,
+    name: "Merkan",
+    inLanguage: lang,
+    description: translations[lang].meta.description,
+    publisher: { "@id": `${site}/#organization` },
+  },
+];
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
